@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = ViewData["Title"] ?? "Skills";
+    var skillCategories = ViewData["SkillCategories"] as List<(string Icon, string Category, string Items)>
+                           ?? new List<(string Icon, string Category, string Items)>();
+}
+
+<section id="skills" class="py-5 my-4">
+    <h2 class="mb-4 fw-bold">@ViewData["SectionHeading"]</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        @foreach (var skill in skillCategories)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-primary"><i class="bi @skill.Icon me-2"></i>@skill.Category</h5>
+                        <p class="card-text">@skill.Items</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

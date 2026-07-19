@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = ViewData["Title"] ?? "Contact";
+}
+
+<section id="contact" class="py-5 my-4">
+    <h2 class="mb-4 fw-bold">@ViewData["SectionHeading"]</h2>
+    <div class="row">
+        <div class="col-md-7">
+            <ul class="list-unstyled fs-5">
+                <li class="mb-3">
+                    <i class="bi bi-envelope-fill text-primary me-2"></i>
+                    <strong>Email:</strong> @ViewData["Email"]
+                </li>
+                <li class="mb-3">
+                    <i class="bi bi-phone-fill text-primary me-2"></i>
+                    <strong>Mobile:</strong> @ViewData["Mobile"]
+                </li>
+                <li class="mb-3">
+                    <i class="bi bi-github text-primary me-2"></i>
+                    <strong>GitHub:</strong>
+                    <a href="@ViewData["GitHubUrl"]" target="_blank" class="text-decoration-none">@ViewData["GitHubHandle"]</a>
+                </li>
+                <li class="mb-3">
+                    <i class="bi bi-facebook text-primary me-2"></i>
+                    <strong>Facebook:</strong>
+                    <a href="@ViewData["FacebookUrl"]" target="_blank" class="text-decoration-none">@ViewData["FacebookHandle"]</a>
+                </li>
+            </ul>
+            <div class="mt-4">
+                <a href="~/Anes, Mariane Valerie _ Resume.pdf" download="Anes_Resume.pdf" class="btn btn-success btn-lg">
+                    <i class="bi bi-download me-2"></i>Download Resume
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

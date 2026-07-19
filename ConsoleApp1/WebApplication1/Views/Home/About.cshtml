@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = ViewData["Title"] ?? "About Me";
+}
+
+<section id="about" class="py-5 my-4">
+    <h2 class="mb-4 fw-bold">@ViewData["SectionHeading"]</h2>
+    <div class="row">
+        <div class="col-12">
+            <p class="fs-6 lh-lg">
+                @ViewData["AboutParagraphOne"]
+            </p>
+            <p class="fs-6 lh-lg">
+                @ViewData["AboutParagraphTwo"]
+            </p>
+        </div>
+    </div>
+</section>
