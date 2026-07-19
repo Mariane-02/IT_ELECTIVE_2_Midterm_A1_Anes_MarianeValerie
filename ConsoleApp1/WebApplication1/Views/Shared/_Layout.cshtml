@@ -37,33 +37,36 @@
 							</h3>
 						</div>
 						<!-- Navigation -->
+						@{
+							var currentAction = ViewContext.RouteData.Values["action"]?.ToString() ?? "Index";
+						}
 						<ul class="nav flex-column">
 							<li class="nav-item mb-3">
-								<a href="#home" class="nav-link">
+								<a asp-controller="Home" asp-action="Index" class="nav-link @(currentAction == "Index" ? "active" : "")">
 									<i class="bi bi-house-door-fill"></i>
 									Home
 								</a>
 							</li>
 							<li class="nav-item mb-3">
-								<a href="#about" class="nav-link">
+								<a asp-controller="Home" asp-action="About" class="nav-link @(currentAction == "About" ? "active" : "")">
 									<i class="bi bi-person-fill"></i>
 									About Me
 								</a>
 							</li>
 							<li class="nav-item mb-3">
-								<a href="#skills" class="nav-link">
+								<a asp-controller="Home" asp-action="Skills" class="nav-link @(currentAction == "Skills" ? "active" : "")">
 									<i class="bi bi-laptop-fill"></i>
 									Skills
 								</a>
 							</li>
 							<li class="nav-item mb-3">
-								<a href="#projects" class="nav-link">
+								<a asp-controller="Home" asp-action="Projects" class="nav-link @(currentAction == "Projects" ? "active" : "")">
 									<i class="bi bi-folder-fill"></i>
 									Projects
 								</a>
 							</li>
 							<li class="nav-item mb-3">
-								<a href="#contact" class="nav-link">
+								<a asp-controller="Home" asp-action="Contact" class="nav-link @(currentAction == "Contact" ? "active" : "")">
 									<i class="bi bi-envelope-fill"></i>
 									Contact
 								</a>
