@@ -122,6 +122,13 @@ body {
     transform: translateX(3px);
 }
 
+.sidebar .nav-link.active {
+    background: rgba(255,255,255,.16);
+    color: var(--gold-accent) !important;
+    font-weight: 700;
+    box-shadow: inset 3px 0 0 var(--gold-accent);
+}
+
 .sidebar .copyright {
     color: rgba(255,255,255,.55);
     border-top: 1px solid rgba(255,255,255,.15);
